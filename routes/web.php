@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/auth',[AuthController::class,'auth'])->name('auth');
+Route::get('/auth/callback',[AuthController::class,'callback'])->name('callback');
+Route::get('/store/info', [AuthController::class, 'showStoreInfo'])->name('store.info');
+
