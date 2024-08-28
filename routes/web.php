@@ -19,5 +19,5 @@ Route::get('/', function () {
 });
 Route::get('/auth',[AuthController::class,'auth'])->name('auth');
 Route::get('/auth/callback',[AuthController::class,'callback'])->name('callback');
-Route::get('/store/info', [AuthController::class, 'showStoreInfo'])->name('store.info');
+
 
