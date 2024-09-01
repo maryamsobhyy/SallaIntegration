@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\SallaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,5 +20,6 @@ Route::get('/', function () {
 });
 Route::get('/auth',[AuthController::class,'auth'])->name('auth');
 Route::get('/auth/callback',[AuthController::class,'callback'])->name('callback');
+
 
 
